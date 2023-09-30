@@ -1,0 +1,133 @@
+/*
+    Original Work from LucaForever/discordstatus-website
+    Licensed under GPLv3: https://www.gnu.org/licenses/gpl-3.0.en.html
+    Heavily customized by dp
+        to add support for:
+            - Spotify progress bar
+            - Elapsed counter (somehow not perfect)
+            - Activities Realtime reloading (keeping data until presence update)
+        to fix:
+            - non-working status message and emoji
+            - layout for small devices
+        to add to my website shortcode
+    What to expect next?
+        - time left counter
+        - upstreaming...? (idk, project seems untouched for 3+ months)
+            (i'm an introvert, so don't expect much)
+    If you want it to be upstreamed, and experience my struggle, go ahead.
+    This customization work + fix went around 5 hours + 7 hours = 12 hours
+*/
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+
+body {
+    padding: 0%;
+    background: rgb(26, 26, 34);
+    overflow: hidden;
+}
+
+.activity {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    grid-template-columns: max-content;
+    width: 98%;
+    padding: 4px;
+    color: white;
+}
+
+.activity ul {
+    margin-left: -2em;
+    margin-top: -10px;
+}
+
+.other ul {
+    margin-left: -2.5em;
+    margin-top: 8px;
+}
+
+.other li {
+    margin-top: -0.8em;
+}
+
+#spotify li:nth-child(1) {
+    color: gainsboro;
+    font-weight: bold;
+}
+
+#spotify li:nth-child(3) {
+    color: coral;
+    font-weight: lighter;
+}
+
+
+
+.discord {
+    display: grid;
+    grid-row: auto;
+    grid-template-rows: max-content;
+    grid-gap: 20px;
+}
+
+
+
+
+
+button {
+    width: 10em;
+    height: 2em;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    background: rgb(120, 69, 186);
+}
+
+#userinfo {
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+    grid-auto-flow: column;
+}
+
+#profile {
+    display: grid;
+    padding:12px;
+    width: 90%;
+    height:fit-content(100%);
+    background: rgb(77, 31, 146);
+    border-radius: 1.5rem;
+    margin:auto;
+}
+
+#activities {
+    display: grid;
+    padding: 12px;
+    width: 90%;
+    background: rgb(77, 31, 146);
+    border-radius: 1.5rem;
+    margin:auto;
+}
+
+#spotifyProgBarCover{
+    display:grid;
+    grid-template-rows:fit-content(100%) fit-content(100%);
+    grid-auto-flow: row;
+}
+#spotifyProgBarCover progress{
+    width:64px;
+    margin:auto;
+}
+
+#avatar {
+    border-radius: 2rem;
+}
+
+strong {
+    font-size: 1em;
+    color: rgb(201, 180, 255);
+}
+
+.activity img {
+    border-radius: 0.6rem;
+}

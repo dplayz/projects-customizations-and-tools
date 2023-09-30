@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Original Work from LucaForever/discordstatus-website
+    Licensed under GPLv3: https://www.gnu.org/licenses/gpl-3.0.en.html
+    Heavily customized by dp
+        to add support for:
+            - Spotify progress bar
+            - Elapsed counter (somehow not perfect)
+            - Activities Realtime reloading (keeping data until presence update)
+        to fix:
+            - non-working status message and emoji
+            - layout for small devices
+        to add to my website shortcode
+    What to expect next?
+        - time left counter
+        - upstreaming...? (idk, project seems untouched for 3+ months)
+            (i'm an introvert, so don't expect much)
+    If you want it to be upstreamed, and experience my struggle, go ahead.
+    This customization work + fix went around 5 hours + 7 hours = 12 hours
+-->
+    <head>
+        <script>var userid = "495543164829040651";</script>
+        <link rel="stylesheet" href="style.css">
+        <script src="lanyard.js"></script>
+        <!-- everything important in here -->
+        <script src="init.js"></script>
+    </head>
+    <!-- adds the main divs and details to be modified in the future -->
+    <body onload="presenceOnload()">
+            <div class="discord" style="color:white;">
+                <div id="profile">
+                    <div id="userinfo">
+                        <img id="avatar"
+                            draggable="false"
+                            alt=""
+                            width="64"
+                            height="64">
+                        <div id="nameStatusContainer" style="display:grid; align-items: center; margin-left:10px">
+                        <p id="name" style="margin:0;"></p>
+                        <div class="statusContainer" style="display:grid; column-gap:2.5px; grid-template-columns: fit-content(100%) fit-content(100%);">
+                        <span id="statusemoji" style="margin:0;"></span><p id="status" style="margin:0;"></p>
+                        </div>          
+                        </div>                                      <!-- (change userId to your user ID) -->
+                        <a style="align-items:end;"id="button" href="https://discord.com/users/495543164829040651/"><button class="bstyle">View user</button></a>
+                    </div>
+                    <br><br>
+                </div>
+                <div id="activities">
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
