@@ -9,6 +9,7 @@ A mini repo made to expose the tools or project customizations I do to make my w
 # Catalog
 Customizations
 - discordstatus-website
+
 Tools
 - none yet (will move everything soon)
 
